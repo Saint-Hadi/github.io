@@ -1,0 +1,155 @@
+.stick_follow_icon {
+    top: 50%;
+    left: 30px;
+    width: 40px; /* Increased for touch targets */
+    height: 240px; /* Adjusted for content */
+    position: fixed;
+    margin-top: -120px; /* Centered vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stick_follow_icon ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stick_follow_icon svg {
+    width: 1.5rem; /* Scalable size */
+    height: 1.5rem;
+    fill: var(--text-color);
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.stick_follow_icon p {
+    top: 80px;
+    left: -24px;
+    width: 80px;
+    height: 20px;
+    color: var(--text-color);
+    font-size: 0.9rem; /* Improved readability */
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.stick_follow_icon ul li {
+    display: block;
+    font-size: 0.9rem; /* Improved readability */
+    text-align: center;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.stick_follow_icon p::after {
+    top: 9px;
+    right: -48px;
+    width: 40px;
+    height: 1px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--text-color);
+}
+
+/* Hover and focus states for accessibility */
+.stick_follow_icon ul li:hover,
+.stick_follow_icon ul li:focus {
+    transform: scale(1.2); /* Subtle scaling effect */
+    outline: none;
+}
+
+/* Large Tablets (769px to 991px) */
+@media only screen and (max-width: 991px) {
+    .stick_follow_icon {
+        top: unset;
+        left: unset;
+        width: auto;
+        height: auto;
+        position: static;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .stick_follow_icon p {
+        top: unset;
+        left: unset;
+        width: auto;
+        height: auto;
+        font-size: 1rem; /* Consistent with body text */
+        margin-right: 30px; /* Reduced for balance */
+        transform: none;
+    }
+
+    .stick_follow_icon p::after {
+        content: none; /* Remove line in horizontal layout */
+    }
+
+    .stick_follow_icon ul {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .stick_follow_icon ul li {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 15px; /* Consistent spacing */
+    }
+
+    .stick_follow_icon svg {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+/* Small Devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .stick_follow_icon {
+        padding: 20px 0; /* Reduced padding */
+    }
+
+    .stick_follow_icon p {
+        font-size: 0.9rem;
+        margin-right: 20px;
+    }
+
+    .stick_follow_icon ul li {
+        margin-right: 10px;
+    }
+
+    .stick_follow_icon svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+/* Very Small Devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .stick_follow_icon {
+        padding: 15px 0;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    .stick_follow_icon p {
+        font-size: 0.85rem;
+        margin-right: 15px;
+    }
+
+    .stick_follow_icon ul li {
+        margin-right: 8px;
+    }
+
+    .stick_follow_icon svg {
+        width: 1rem;
+        height: 1rem;
+    }
+}

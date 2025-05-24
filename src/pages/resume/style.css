@@ -1,0 +1,466 @@
+/* Base styles for Resume page */
+.About-header {
+    padding: 70px 100px 100px 100px;
+}
+
+.sec_sp {
+    margin-bottom: 40px;
+}
+
+.t_border {
+    border-top: 1px solid var(--secondary-color);
+}
+
+.color_sec {
+    color: var(--secondary-color);
+}
+
+.text_2 {
+    color: var(--text-color-2);
+}
+
+.ac_btn {
+    padding: 4px 8px;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ac_btn:hover {
+    box-shadow: 8px 8px 0px var(--text-color), -8px -8px 0px var(--text-color);
+}
+
+.ac_btn .ring {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0px, 90px, 0px);
+}
+
+.ac_btn .one {
+    background-color: #000;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+.ac_btn .two {
+    background-color: var(--primary-color);
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+.ac_btn .three {
+    background-color: var(--secondary-color);
+    transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+.ac_btn:hover .one,
+.ac_btn:hover .two,
+.ac_btn:hover .three {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+#button_h:hover {
+    color: var(--primary-color);
+}
+
+.about-text {
+    font-size: 0.875rem;
+}
+
+.skills-grid {
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-item {
+    text-align: center;
+    width: 100px;
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.skill-item p {
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.education-header .university {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.education-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-left: 15px;
+}
+
+.education-item .major {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.education-item .description {
+    font-size: 0.75rem;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h5 {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experience-item .time {
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+}
+
+.experience-item .description {
+    font-size: 0.875rem;
+}
+
+.publication-item {
+    margin-bottom: 20px;
+}
+
+.publication-item img {
+    max-width: 500px;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.publication-item h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.awards-item {
+    margin-bottom: 10px;
+}
+
+.awards-item .award-title {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.awards-item .description {
+    font-size: 0.875rem;
+}
+
+/* Large Tablets (max-width: 991px) */
+@media only screen and (max-width: 991px) {
+    .About-header {
+        padding: 50px 20px;
+    }
+
+    .sec_sp {
+        margin-bottom: 30px;
+    }
+
+    .About-header .display-9 {
+        font-size: 1.8rem;
+    }
+
+    .color_sec {
+        font-size: 1.5rem;
+    }
+
+    .about-text {
+        font-size: 0.85rem;
+    }
+
+    .skill-item {
+        width: 80px;
+    }
+
+    .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-item p {
+        font-size: 0.85rem;
+        margin-top: 6px;
+    }
+
+    .education-header .university {
+        font-size: 0.85rem;
+    }
+
+    .education-item img {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .education-item .major {
+        font-size: 0.85rem;
+    }
+
+    .education-item .description {
+        font-size: 0.7rem;
+    }
+
+    .experience-item h5 {
+        font-size: 0.85rem;
+    }
+
+    .experience-item .time {
+        font-size: 0.85rem;
+    }
+
+    .experience-item .description {
+        font-size: 0.85rem;
+    }
+
+    .publication-item img {
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    .publication-item h5 {
+        font-size: 0.95rem;
+    }
+
+    .ac_btn {
+        padding: 3px 6px;
+        border-width: 1.5px;
+        margin-right: 15px;
+    }
+
+    .ac_btn:hover {
+        box-shadow: 6px 6px 0px var(--text-color), -6px -6px 0px var(--text-color);
+    }
+
+    .awards-item .award-title {
+        font-size: 0.85rem;
+    }
+
+    .awards-item .description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .About-header {
+        padding: 40px 15px;
+    }
+
+    .sec_sp {
+        margin-bottom: 20px;
+    }
+
+    .About-header .display-9 {
+        font-size: 1.6rem;
+    }
+
+    .color_sec {
+        font-size: 1.3rem;
+    }
+
+    .about-text {
+        font-size: 0.8rem;
+    }
+
+    .skill-item {
+        width: 70px;
+    }
+
+    .skill-item img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skill-item p {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    .education-header .university {
+        font-size: 0.8rem;
+    }
+
+    .education-item img {
+        width: 35px;
+        height: 35px;
+        margin-left: 8px;
+    }
+
+    .education-item .major {
+        font-size: 0.8rem;
+    }
+
+    .education-item .description {
+        font-size: 0.65rem;
+    }
+
+    .experience-item h5 {
+        font-size: 0.8rem;
+    }
+
+    .experience-item .time {
+        font-size: 0.8rem;
+    }
+
+    .experience-item .description {
+        font-size: 0.8rem;
+    }
+
+    .publication-item img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .publication-item h5 {
+        font-size: 0.9rem;
+    }
+
+    .ac_btn {
+        padding: 2px 5px;
+        border-width: 1px;
+        margin-right: 10px;
+    }
+
+    .ac_btn:hover {
+        box-shadow: 4px 4px 0px var(--text-color), -4px -4px 0px var(--text-color);
+    }
+
+    .awards-item .award-title {
+        font-size: 0.8rem;
+    }
+
+    .awards-item .description {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small phones (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .About-header {
+        padding: 30px 10px;
+    }
+
+    .sec_sp {
+        margin-bottom: 15px;
+    }
+
+    .About-header .display-9 {
+        font-size: 1.4rem;
+    }
+
+    .color_sec {
+        font-size: 1.1rem;
+    }
+
+    .about-text {
+        font-size: 0.75rem;
+    }
+
+    .skill-item {
+        width: 60px;
+    }
+
+    .skill-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .skill-item p {
+        font-size: 0.75rem;
+        margin-top: 4px;
+    }
+
+    .education-header .university {
+        font-size: 0.75rem;
+    }
+
+    .education-item img {
+        width: 30px;
+        height: 30px;
+        margin-left: 6px;
+    }
+
+    .education-item .major {
+        font-size: 0.75rem;
+    }
+
+    .education-item .description {
+        font-size: 0.6rem;
+    }
+
+    .experience-item h5 {
+        font-size: 0.75rem;
+    }
+
+    .experience-item .time {
+        font-size: 0.75rem;
+    }
+
+    .experience-item .description {
+        font-size: 0.75rem;
+    }
+
+    .publication-item img {
+        max-width: 100%;
+        max-height: 150px;
+    }
+
+    .publication-item h5 {
+        font-size: 0.85rem;
+    }
+
+    .ac_btn {
+        padding: 2px 4px;
+        border-width: 1px;
+        margin-right: 8px;
+    }
+
+    .ac_btn:hover {
+        box-shadow: 3px 3px 0px var(--text-color), -3px -3px 0px var(--text-color);
+    }
+
+    .awards-item .award-title {
+        font-size: 0.75rem;
+    }
+
+    .awards-item .description {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,108 @@
+/* Existing styles from the provided snippet */
+@media only screen and (max-width: 991px) {
+    .s_c {
+        padding-top: 40px;
+    }
+}
+
+.page-enter {
+    transform: translateY(100%);
+}
+
+.page-enter-active {
+    transform: translateY(0%);
+    transition: all 400ms ease-out;
+}
+
+.page-exit {
+    transform: translateY(0%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.page-exit-active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-130%);
+    transition: all 400ms ease-out;
+}
+
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1140px;
+    }
+}
+
+/* Enhanced Mobile Mode: Tablets and smaller (max-width: 991px) */
+@media only screen and (max-width: 991px) {
+    .s_c {
+        padding-top: clamp(20px, 5vw, 30px); /* Flexible padding for mobile */
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 100%; /* Full-width containers */
+        padding: 0 clamp(10px, 3vw, 15px); /* Responsive padding */
+        box-sizing: border-box;
+    }
+
+    .page-enter-active,
+    .page-exit-active {
+        transition: all 300ms ease-out; /* Faster transitions for mobile */
+    }
+}
+
+/* Mobile Mode: Smaller tablets and phones (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .s_c {
+        padding-top: clamp(15px, 4vw, 20px); /* Further reduced padding */
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        padding: 0 clamp(8px, 2.5vw, 12px); /* Tighter padding */
+    }
+
+    .page-enter-active,
+    .page-exit-active {
+        transition: all 250ms ease-out; /* Even faster transitions */
+    }
+}
+
+/* Mobile Mode: Small phones (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .s_c {
+        padding-top: clamp(10px, 3vw, 15px); /* Minimal padding */
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        padding: 0 clamp(5px, 2vw, 10px); /* Minimal padding for small screens */
+    }
+
+    .page-enter-active,
+    .page-exit-active {
+        transition: all 200ms ease-out; /* Fastest transitions for small devices */
+    }
+}

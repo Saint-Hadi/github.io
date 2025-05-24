@@ -1,0 +1,79 @@
+.theme_toggler {
+    background: var(--primary-color);
+    z-index: 999999999;
+    position: fixed; /* Explicitly set for consistency */
+    top: 20px; /* Position near top-left corner */
+    left: 20px; /* Slightly increased to avoid edge */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center SVG horizontally */
+    height: 48px; /* Accessible touch target size */
+    width: 48px; /* Square for consistency */
+    padding: 8px; /* Balanced padding */
+    border-radius: 50%; /* Circular toggle for modern look */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth hover/focus */
+}
+
+/* SVG icon styling */
+.theme_toggler svg {
+    width: 1.8rem; /* Scalable size */
+    height: 1.8rem;
+    fill: var(--text-color); /* Match theme text color */
+    transition: transform 0.3s ease;
+}
+
+/* Hover and focus states for accessibility */
+.theme_toggler:hover,
+.theme_toggler:focus {
+    transform: scale(1.1); /* Subtle scaling effect */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px var(--text-color); /* Focus indicator */
+}
+
+/* Large Tablets (max-width: 991px) */
+@media only screen and (max-width: 991px) {
+    .theme_toggler {
+        top: 15px;
+        left: 15px;
+        height: 44px; /* Slightly smaller for tablets */
+        width: 44px;
+        padding: 6px;
+    }
+
+    .theme_toggler svg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .theme_toggler {
+        top: 10px;
+        left: 10px;
+        height: 40px; /* Smaller for mobile */
+        width: 40px;
+        padding: 5px;
+    }
+
+    .theme_toggler svg {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+/* Very Small Devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .theme_toggler {
+        top: 8px;
+        left: 8px;
+        height: 36px; /* Minimum touch target size */
+        width: 36px;
+        padding: 4px;
+    }
+
+    .theme_toggler svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
