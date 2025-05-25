@@ -136,6 +136,23 @@ const awards = [
     },
 ];
 
+const projects = [
+    {
+        title: "CDC MySQL to Clickhouse with Debezium and AVRO connector, a real-time replication",
+        image: "/images/project_cdc.png",
+        description: "In this setup, we build a real-time data pipeline using Docker Compose to orchestrate services like MariaDB (our source database), Redpanda (a Kafka-compatible event streaming platform), Debezium (for capturing database changes), and ClickHouse (as the analytics engine). After launching services with docker-compose up -d, we configure a Debezium connector via a curl command to monitor changes in the ourdb.ourtable_message table and stream them to a Redpanda topic in Avro format. On the ClickHouse side, we define a Kafka engine table to consume messages from this topic and create a materialized view to transform and store the data in a MergeTree table. Redpanda manages topic streams, and with the rpk CLI, we can list topics and scale them-e.g., using rpk topic add-partitions to increase parallelism for high-throughput processing. This pipeline enables low-latency, scalable CDC-based analytics.",
+        githubLink: "https://github.com/Saint-Hadi/cdc-mysql-clickhouse",
+        mediumLink: "https://medium.com/@Saint-Hadi/cdc-mysql-to-clickhouse-with-debezium-and-avro-connector-a-real-time-replication-75ea20554967",
+    },
+    {
+        title: "CDC MySQL to Clickhouse with Debezium and AVRO connector, a real-time replication",
+        image: "/images/project_cdc.png",
+        description: "In this setup, we build a real-time data pipeline using Docker Compose to orchestrate services like MariaDB (our source database), Redpanda (a Kafka-compatible event streaming platform), Debezium (for capturing database changes), and ClickHouse (as the analytics engine). After launching services with docker-compose up -d, we configure a Debezium connector via a curl command to monitor changes in the ourdb.ourtable_message table and stream them to a Redpanda topic in Avro format. On the ClickHouse side, we define a Kafka engine table to consume messages from this topic and create a materialized view to transform and store the data in a MergeTree table. Redpanda manages topic streams, and with the rpk CLI, we can list topics and scale them-e.g., using rpk topic add-partitions to increase parallelism for high-throughput processing. This pipeline enables low-latency, scalable CDC-based analytics.",
+        githubLink: "https://github.com/Saint-Hadi/cdc-mysql-clickhouse",
+        mediumLink: "https://medium.com/@Saint-Hadi/cdc-mysql-to-clickhouse-with-debezium-and-avro-connector-a-real-time-replication-75ea20554967",
+    },
+];
+
 
 
 const contactConfig = {
@@ -162,6 +179,7 @@ export {
     experiences,
     publications,
     awards,
+    projects,
     introdata,
     contactConfig,
     socialprofils,

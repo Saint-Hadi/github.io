@@ -1,108 +1,115 @@
-/* Existing styles from the provided snippet */
-@media only screen and (max-width: 991px) {
-    .s_c {
-        padding-top: 40px;
-    }
+.stick_follow_icon {
+    top: 50%;
+    left: 30px;
+    width: 50px; /* Increased to fit icons and text */
+    height: 200px;
+    position: fixed;
+    margin-top: -100px;
 }
 
-.page-enter {
-    transform: translateY(100%);
+.stick_follow_icon ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.page-enter-active {
-    transform: translateY(0%);
-    transition: all 400ms ease-out;
+.stick_follow_icon svg {
+    width: 1.3em;
+    height: 1.3em;
+    fill: var(--text-color)
 }
 
-.page-exit {
-    transform: translateY(0%);
+.stick_follow_icon p {
+    top: 70px;
+    left: 0; /* Adjusted to stay within container */
+    width: 68px;
+    height: 20px;
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    position: relative;
+    transform: rotate(-90deg);
+    transform-origin: center; /* Ensure rotation is centered */
+}
+.stick_follow_icon p:after {
+    top: 9px;
+    right: -40px; /* Reduced to avoid excessive extension */
+    width: 30px; /* Adjusted for balance */
+    height: 1px;
+    content: "";
+    display: block;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
+    background-color: var(--text-color);
 }
 
-.page-exit-active {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    transform: translateY(-130%);
-    transition: all 400ms ease-out;
+.stick_follow_icon ul li {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: all .3s;
 }
 
-@media (min-width: 1400px) {
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 1140px;
-    }
-}
-
-/* Enhanced Mobile Mode: Tablets and smaller (max-width: 991px) */
 @media only screen and (max-width: 991px) {
-    .s_c {
-        padding-top: clamp(20px, 5vw, 30px); /* Flexible padding for mobile */
+    .stick_follow_icon {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+        align-items: center;
     }
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 100%; /* Full-width containers */
-        padding: 0 clamp(10px, 3vw, 15px); /* Responsive padding */
-        box-sizing: border-box;
+    .stick_follow_icon p {
+        top: unset;
+        left: unset;
+        width: unset;
+        height: unset;
+        white-space: nowrap;
+        position: relative;
+        transform: unset;
+        font-size: 14px;
+        margin-right: 20px;
+        order: 1;
     }
-
-    .page-enter-active,
-    .page-exit-active {
-        transition: all 300ms ease-out; /* Faster transitions for mobile */
+    .stick_follow_icon p:after {
+        width: 0px;
+        right: -5px;
+        top: 9px;
+        height: 1px;
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: var(--text-color);
+    }
+    .stick_follow_icon ul {
+        margin-bottom: 0;
+        order: 2;
+    }
+    .stick_follow_icon ul li {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 8px;
     }
 }
-
-/* Mobile Mode: Smaller tablets and phones (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-    .s_c {
-        padding-top: clamp(15px, 4vw, 20px); /* Further reduced padding */
+@media only screen and (max-width: 400px) {
+    .stick_follow_icon {
+        flex-wrap: wrap;
+        padding: 10px 0;
     }
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        padding: 0 clamp(8px, 2.5vw, 12px); /* Tighter padding */
+    .stick_follow_icon p {
+        font-size: 12px;
+        margin-right: 10px;
     }
-
-    .page-enter-active,
-    .page-exit-active {
-        transition: all 250ms ease-out; /* Even faster transitions */
+    .stick_follow_icon p:after {
+        width: 0px;
+        right: -5px;
     }
-}
-
-/* Mobile Mode: Small phones (max-width: 480px) */
-@media only screen and (max-width: 480px) {
-    .s_c {
-        padding-top: clamp(10px, 3vw, 15px); /* Minimal padding */
-    }
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        padding: 0 clamp(5px, 2vw, 10px); /* Minimal padding for small screens */
-    }
-
-    .page-enter-active,
-    .page-exit-active {
-        transition: all 200ms ease-out; /* Fastest transitions for small devices */
+    .stick_follow_icon ul li {
+        margin-right: 5px;
     }
 }
