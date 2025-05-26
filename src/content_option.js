@@ -76,7 +76,7 @@ const skills = [
         ],
     },
     {
-        category: "Others",
+        category: "Other",
         skills: [
             { name: "Docker", logo: "/images/docker.png" },
             { name: "Git", logo: "/images/git.png" },

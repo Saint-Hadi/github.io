@@ -17,8 +17,7 @@ export const Home = () => {
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "
-            style={{ backgroundImage: "url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2lydGZxbWs5eDdiZjdkaXNjY291bzFmY2phN3Azb252anZuMXZtcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11KzOet1ElBDz2/giphy.webp)" }}
-          ></div>
+            style={{ backgroundImage: "url(/images/bg.gif)" }} ></div>
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center ">
               <div className="intro mx-auto">
